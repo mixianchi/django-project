@@ -1,11 +1,26 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 
+posts = [
+    {
+        'author':'xin',
+        'title':'page 1',
+        'content':'first content'
+    },
+    {
+        'author': 'haha',
+        'title': 'page 2',
+        'content': 'second content'
+    }
+]
+
 def home(request):
-    return HttpResponse('<h1>Pingshan Home</h1>')
+    context = {
+        'posts': posts
+    }
+    return render(request, 'pingshan/home.html', context)
 
 def about(request):
-    return HttpResponse('<h1>Pingshan About</h1>')
+    return render(request, 'pingshan/about.html')
 """
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
