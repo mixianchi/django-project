@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Appeal
 
 posts = [
     {
@@ -19,8 +20,8 @@ def home(request):
     }
     return render(request, 'pingshan/home.html', context)
 
-def about(request):
-    return render(request, 'pingshan/about.html')
+def login(request):
+    return render(request, 'pingshan/login.html', {'title': 'Login'})
 """
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")

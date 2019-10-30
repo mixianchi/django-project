@@ -76,8 +76,14 @@ WSGI_APPLICATION = 'aneleganthusky.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django_mysql',
+        'USER': 'root',
+        'PASSWORD': 'XSYVOqe92hIS',
+        'HOST': '47.95.0.1',
+        'PORT': '3306',
+        'CHARSET': 'utf8mb4',
+        'COLLATION': 'utf8mb4_0900_ai_ci'
     }
 }
 
